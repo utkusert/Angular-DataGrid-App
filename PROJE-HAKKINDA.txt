@@ -1,0 +1,12 @@
+1. Projeye ilk olarak baktığımda aklımda canlanan ilk şey ToDo-list tarzı yapacaklarımızı yazıp onları ekranda göreceğimiz
+    bir projeydi.
+2.İlk olarak Html&Css konusunda zayıf olduğumu da bildiğim için o kısmı önce halletmeye koyuldum.
+3.Normalde bu tarz projelerde ilk back-end kısmı oluşuturulur onun üzerine modeller yerleştirilir diye düşünüyorum.
+4.Front-end'de iskeleti oluşturduktan sonra bu seferde arka tarafta verilerin tutulacağı,güncelleneceği kısım olan state
+   management kısmını yapmaya başladım.
+5.NgRx bu kadar büyük olmayan bir proje için mantıklı mı bilmiyorum ama ben yazmasından keyif aldığım ve ileride proje büyürse
+    sıkıntıya sokmayacak bir şey olduğu için NgRx ile kodladım.
+6.Angular kısmı tamamlandıktan sonra verilerin CRUD işlemlerini arka tarafta yapacak back-end mimarisi gerektiği için LoopBack4
+    ile model kısmını oluşturdum.
+7.Rast Mobile ile olan serüvenim burada biter mi bilmiyorum yine de bu basit ama pratik olarak iyi olan taski verdiğiniz için
+    teşekkür ederim.
