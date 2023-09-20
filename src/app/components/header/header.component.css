@@ -1,0 +1,19 @@
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+}

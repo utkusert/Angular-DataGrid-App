@@ -1,0 +1,193 @@
+.frame {
+    background-color: #d9d9d954;
+    margin: 1rem 1.5rem;
+    border-radius: 3px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.table-head {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search-box {
+    width: 400px;
+    height: 30px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-box>i {
+    font-size: 20px;
+    color: #777;
+}
+
+.search-box>input {
+    flex: 1;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.filter-icon {
+    color: #777;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.new-button {
+    background-color: white;
+    color: #777;
+    font-size: 18px;
+    margin-left: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.table {
+    margin-bottom: 20px;
+}
+
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ddd;
+    padding: 25px;
+    text-align: left;
+    border-radius: 0;
+
+}
+
+.data-table th {
+    background-color: #f2f2f2;
+
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Çift sıradaki satırların arka plan rengini ayarlar */
+}
+
+.table-end {
+    display: flex;
+    justify-content: space-between;
+}
+
+.show-button {
+    display: flex;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.row-number {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 30px;
+    background-color: #bcbcbc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.row-number .arrow i {
+    font-size: 14px;
+    margin: 1px 0;
+    padding: 0 3px;
+    line-height: 5px;
+    margin-left: 10px;
+}
+
+.row-number .arrow {
+    line-height: 0px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination span {
+    font-size: 14px;
+}
+
+.pagination i {
+    cursor: pointer;
+}
+
+.modal-block {
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 50%;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    margin-top: 20px;
+}
+
+
+.buttons .right {
+    margin-left: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.modal-frame {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 2.5rem;
+
+}
+
+.modal-header {
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.red-text {
+    color: red;
+    margin-top: 5px;
+}

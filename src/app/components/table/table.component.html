@@ -1,0 +1,95 @@
+<div *ngIf="!isModalOpen" class="frame">
+    <div class="table-head">
+        <div class="search-box">
+            <input type="search" [(ngModel)]="searchText" placeholder="Search objects...">
+            <i class="fa fa-search" aria-hidden="true" style="cursor: pointer;"></i>
+        </div>
+        <div class="filter-icon">
+            <i class="fa-solid fa-filter"></i>
+        </div>
+        <div class="new-button" (click)="openModal()">
+            + Yeni Hesap Ekle
+        </div>
+    </div>
+    <div class="table">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Sosyal Medya Linki <i class="fa-solid fa-arrow-up" style="color: #4c586b;float:right"></i></th>
+                    <th>Sosyal Medya Adı <i class="fa-solid fa-arrow-down" style="color: #4c586b;float:right"></i></th>
+                    <th>Açıklama</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let socialMedia of getPageData.slice(0, rowCount)|filter:searchText">
+                    <td>{{socialMedia.link}}</td>
+                    <td>{{socialMedia.name}}</td>
+                    <td>{{socialMedia.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-end">
+        <div class="show-button">Show:
+            <div>
+                <div class="row-number"> {{ rowCount }} rows
+                    <div class="arrow-container">
+                        <div (click)="increaseRowCount()" class="arrow up"><i class="fa fa-caret-up"
+                                aria-hidden="true"></i></div>
+                        <div (click)=" decreaseRowCount()" class="arrow down"><i class="fa fa-caret-down"
+                                aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <i (click)="prevPage()" class="fa-solid fa-chevron-left"></i>
+            <span>{{ currentPage }} of {{ totalPages() }}</span>
+            <i (click)="nextPage()" class="fa-solid fa-chevron-right"></i>
+        </div>
+    </div>
+</div>
+<div class="modal-frame">
+    <div class="row" style="padding: 15px;">
+        <div class="modal-block" *ngIf="isModalOpen">
+            <div class="modal-header">
+                <div class="close-button" (click)="closeModal()">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+            </div>
+            <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="link">Sosyal Medya Linki</label>
+                    <input type="text" id="link" class="form-control" formControlName="link">
+                    <div *ngIf="dataForm.get('link')?.touched && dataForm.get('link')?.dirty && dataForm.get('link')?.hasError('required')"
+                        class="error-message red-text">
+                        Sosyal Medya Linki gereklidir.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Sosyal Medya Adı</label>
+                    <input type="text" id="name" class="form-control" formControlName="name">
+                    <div *ngIf="dataForm.get('name')?.touched && dataForm.get('name')?.dirty && dataForm.get('name')?.hasError('required')"
+                        class="error-message red-text">
+                        Sosyal Medya Adı gereklidir.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Açıklama</label>
+                    <input type="text" id="description" class="form-control" formControlName="description">
+                </div>
+                <div class="buttons">
+                    <div class="right">
+                        <button (click)="closeModal()" type="submit" style="border-radius: 20px;"
+                            class="btn btn-danger mt-3">Vazgeç</button>
+                    </div>
+                    <div class="right">
+                        <button type="submit" [disabled]="!dataForm.valid" style="border-radius: 20px;"
+                            class="btn btn-primary mt-3">Kaydet</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
